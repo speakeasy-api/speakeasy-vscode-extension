@@ -1,0 +1,54 @@
+{
+  "name": "speakeasy-vscode-extension",
+  "displayName": "Speakeasy",
+  "description": "The Speakeasy extension for Visual Studio Code. The Speakeasy extension will help you validate your OpenAPI 3.X documents ready for generation of production grade SDKs.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/speakeasy-api/speakeasy-vscode-extension"
+  },
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.86.0"
+  },
+  "categories": [
+    "Linters"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "speakeasy-vscode-extension.restart",
+        "title": "Restart the Speakeasy extension"
+      },
+      {
+        "command": "speakeasy-vscode-extension.stop",
+        "title": "Stop the Speakeasy extension"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "pnpm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "pnpm run compile && pnpm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@types/vscode": "^1.86.0",
+    "@typescript-eslint/eslint-plugin": "^6.19.1",
+    "@typescript-eslint/parser": "^6.19.1",
+    "@vscode/test-cli": "^0.0.4",
+    "@vscode/test-electron": "^2.3.9",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "vscode-languageclient": "^9.0.1"
+  }
+}
