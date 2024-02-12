@@ -4,11 +4,11 @@
   "description": "The Speakeasy extension for Visual Studio Code. The Speakeasy extension will help you validate your OpenAPI 3.X documents ready for generation of production grade SDKs.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/speakeasy-api/speakeasy-vscode-extension"
+    "url": "https://github.com/speakeasy-api/speakeasy"
   },
   "publisher": "speakeasy",
   "icon": "images/icon.png",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "engines": {
     "vscode": "^1.86.0"
   },
