@@ -6,7 +6,9 @@
     "type": "git",
     "url": "https://github.com/speakeasy-api/speakeasy-vscode-extension"
   },
-  "version": "0.0.1",
+  "publisher": "speakeasy",
+  "icon": "images/icon.png",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.86.0"
   },
