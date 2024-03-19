@@ -8,7 +8,7 @@
   },
   "publisher": "speakeasy",
   "icon": "images/icon.png",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "engines": {
     "vscode": "^1.86.0"
   },
@@ -33,13 +33,13 @@
     "yamlValidation": [
       {
         "fileMatch": [
-          "lint.yaml"
+          ".speakeasy/lint.yaml"
         ],
         "url": "https://github.com/speakeasy-api/sdk-gen-config/raw/main/schemas/lint.schema.json"
       },
       {
         "fileMatch": [
-          "workflow.yaml"
+          ".speakeasy/workflow.yaml"
         ],
         "url": "https://github.com/speakeasy-api/sdk-gen-config/raw/main/schemas/workflow.schema.json"
       }
