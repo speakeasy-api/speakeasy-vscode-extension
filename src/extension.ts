@@ -1,3 +1,4 @@
+import * as cp from "child_process";
 import * as vscode from "vscode";
 
 import { LanguageClient } from "vscode-languageclient/node";
@@ -26,13 +27,28 @@ export async function activate(context: vscode.ExtensionContext) {
 }
 
 async function startServer() {
+  try {
+    cp.execSync("speakeasy --version");
+  } catch (e) {
+    vscode.window.showErrorMessage(
+      "Speakeasy is not installed. Please follow the instructions at https://www.speakeasyapi.dev/docs/create-client-sdks#prerequisites"
+    );
+    return;
+  }
+
   const command = "speakeasy";
 
   lspClient = new LanguageClient(
     "speakeasy-vscode-extension",
     {
-      run: { command: command, args: ["language-server"] },
-      debug: { command: command, args: ["language-server"] },
+      run: {
+        command: command,
+        args: ["language-server"],
+      },
+      debug: {
+        command: command,
+        args: ["language-server"],
+      },
     },
     {
       documentSelector: [
